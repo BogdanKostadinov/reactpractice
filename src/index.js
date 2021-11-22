@@ -2,11 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 
+class TestClass extends React.Component{
+  constructor(props){
+    super(props);
+  }
+  render(){
+    return(
+      <div>
+        <h1>THIS IS A TEST</h1>
+      </div>
+    )
+  }
+}
 
-const JSX = (<div>
-  <p>Hello</p>
-  <p>Worlld</p>
-</div>);
 
 ReactDOM.render(
   <React.StrictMode>
@@ -15,3 +23,5 @@ ReactDOM.render(
 
   document.getElementById('root')
 );
+
+ReactDOM.render(<TestClass/>, document.getElementById('test'));
